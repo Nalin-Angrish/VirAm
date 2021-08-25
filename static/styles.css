@@ -1,0 +1,300 @@
+@import url("https://fonts.googleapis.com/css2?family=Bitter:wght@900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Oxygen&display=swap');
+* {
+    box-sizing: border-box;
+    transition: all .1s ease;
+}
+
+body,
+html {
+    height: 100vh;
+    max-height: 100vh;
+    padding: 0;
+    margin: 0;
+    font-size: larger;
+    background-color: #000;
+    color: #ddd;
+    font-family: Oxygen, Arial, Helvetica, sans-serif;
+}
+
+body {
+    padding-left: 50px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: Bitter, sans-serif;
+}
+
+a {
+    color: #06f;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    box-shadow: 0 0 10px #ccc9;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #000;
+}
+
+nav a {
+    padding: 10px 0;
+}
+
+nav a:hover svg {
+    transform: scale(1.1);
+}
+
+nav path {
+    fill: #fff;
+}
+
+nav hr {
+    width: 100%;
+}
+
+.chat {
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - 80px);
+    overflow-y: scroll;
+    overflow-x: hidden;
+    padding: 20px;
+}
+
+.chat::-webkit-scrollbar {
+    background-color: #fff0;
+    width: 10px;
+}
+
+.chat::-webkit-scrollbar-thumb {
+    background-color: #333;
+}
+
+.chat::-webkit-scrollbar-thumb:hover {
+    background-color: #999;
+}
+
+.message {
+    padding: 10px;
+    border-radius: 5px;
+    max-width: 80%;
+    margin-bottom: 20px;
+}
+
+.message img {
+    max-height: 500px;
+    max-width: 100%;
+}
+
+.message img:hover {
+    filter: brightness(.7);
+}
+
+.message.user {
+    align-self: flex-end;
+    background-color: #00f;
+    color: #fff;
+}
+
+.message.bot {
+    align-self: flex-start;
+    background-color: #bf3;
+    color: #000;
+}
+
+.messagebox {
+    background-color: #333;
+    height: 80px;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 10px;
+    display: flex;
+}
+
+.messagebox input[type=text] {
+    flex: 9;
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    background-color: #000;
+    color: #fff;
+    font-size: large;
+}
+
+.messagebox input[type=button] {
+    flex: 1;
+    background: linear-gradient(to top, #06f 100%, #09f 100%);
+    color: #fff;
+    border: 0;
+    cursor: pointer;
+}
+
+.messagebox input[type=button]:hover {
+    background: linear-gradient(to top, #06f 0%, #09f 100%);
+}
+
+#nomessages {
+    text-align: center;
+}
+
+.features {
+    padding: 20px;
+}
+
+.features .table {
+    margin-top: 20px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    column-gap: 10px;
+    row-gap: 20px;
+}
+
+.feature {
+    padding: 30px;
+}
+
+.feature ul {
+    list-style: none;
+    padding: 0;
+    columns: 3;
+    text-align: left;
+}
+
+.methods {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 800px;
+}
+
+.methods a {
+    flex: 1;
+    min-width: 50%;
+    padding: 50px 0;
+    cursor: pointer;
+}
+
+.methods a:hover {
+    filter: brightness(.8);
+}
+
+.methods a svg {
+    transform: scale(2);
+}
+
+.methods path {
+    fill: #fff;
+}
+
+.methods .facebook {
+    background-color: #4267B2;
+}
+
+.methods .whatsapp {
+    background-color: #25D366;
+}
+
+.methods .twitter {
+    background-color: #1DA1F2;
+}
+
+.methods .copy {
+    background-color: #888;
+}
+
+.home {
+    width: 100%;
+}
+
+.home section {
+    min-height: 80vh;
+    width: 100%;
+}
+
+.sect-1 {
+    background: url("/static/images/circuits-red-scaled.jpg");
+    background-position: center;
+    color: #fff;
+}
+
+.sect-1 h1 {
+    font-size: calc(10px + 20vmin);
+    margin: 20px auto;
+}
+
+.sect-1 a {
+    background-color: #06f;
+    color: #fff;
+    border-radius: 10px;
+    padding: 10px 20px;
+    text-decoration: none;
+    transition: all .2s;
+}
+
+.sect-1 a:hover {
+    background-color: #03f;
+}
+
+.sect-2 {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.sect-2 h1 {
+    font-size: calc(10px + 7vmin);
+    margin: 20px 0;
+    text-align: left;
+}
+
+.sect-2 p {
+    color: #ddd;
+}
+
+.sect-3 {
+    font-size: calc(10px + 5vmin);
+    padding: 20px;
+}
+
+.sect-3 p {
+    color: #ddd;
+}
+
+@media screen and (max-width:900px) {
+    .feature ul {
+        columns: 2;
+    }
+}
+
+@media screen and (max-width:650px) {
+    .features {
+        font-size: large;
+    }
+    .feature ul {
+        columns: 1;
+    }
+}

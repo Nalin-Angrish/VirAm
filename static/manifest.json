@@ -1,0 +1,17 @@
+{
+    "name": "MCS - VF",
+    "icons": [{
+        "src": "/static/logo.png",
+        "type": "image/png",
+        "sizes": "512x512"
+    }, {
+        "src": "/static/logo_192x192.png",
+        "type": "image/png",
+        "sizes": "192x192"
+    }],
+    "start_url": "/chat",
+    "background_color": "#fff",
+    "display": "standalone",
+    "scope": "/chat",
+    "theme_color": "#fff"
+}

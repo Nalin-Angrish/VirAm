@@ -1,0 +1,13 @@
+{%extends "root.html"%}{%block content%}
+<div class="feature center">
+    <h1>Currency Conversion</h1>
+    <p>This feature enables you to convert currencies so that you know how much you are spending if you're not at home</p>
+    <h2>Currency support</h2>
+    <p>This bot supports the following currencies:</p>
+    <ul>
+        {%for currency in features.currencies()%}
+        <li><strong>{{currency.code}}</strong>: {{currency.name}}</li>
+        {%endfor%}
+    </ul>
+</div>
+{%endblock%}

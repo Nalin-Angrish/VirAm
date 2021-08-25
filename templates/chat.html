@@ -1,0 +1,11 @@
+{%extends "root.html"%}{%block content%}
+<div class="chat" id="chat">
+    <div id="nomessages">
+        No messages yet. Send "Hello" to get started.
+    </div>
+</div>
+<div class="messagebox">
+    <input type="text" placeholder="Enter your message" id="message" />
+    <input type="button" value="Send" onclick="sendMessage()" />
+</div>
+{%endblock%}

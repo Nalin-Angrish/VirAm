@@ -1,0 +1,13 @@
+{%extends "root.html"%}{%block content%}
+<div class="feature center">
+    <h1>Translator</h1>
+    <p>You might not understand certain words or phrases on foreign land, but you can use this feature to translate them to your native language.</p>
+    <h2>Language support</h2>
+    <p>This bot supports the following languages:</p>
+    <ul>
+        {%for currency in features.languages()%}
+        <li><strong>{{currency}}</strong></li>
+        {%endfor%}
+    </ul>
+</div>
+{%endblock%}

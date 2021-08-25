@@ -1,0 +1,7 @@
+gunicorn
+flask
+google-cloud-dialogflow
+python-dotenv
+forex_python
+google-cloud-translate
+requests
